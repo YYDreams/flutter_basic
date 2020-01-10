@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter20200109_basic_parts/pages/uikit.dart';
-import 'package:flutter20200109_basic_parts/test.dart';
+import 'package:flutter20200109_basic_parts/widget/test.dart';
+
+
 
 import 'compoents.dart';
 
@@ -34,6 +36,7 @@ class _IndexPageState extends State<IndexPage> {
     UIKitPage(),
     CompoentsPage(),
     TestPage(),
+    // SliverDemo(),
 
   ];
  int _currentIndex = 1;

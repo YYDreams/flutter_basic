@@ -2,29 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../model/post.dart';
 
-class PageViewPage extends StatelessWidget {
-  const PageViewPage({Key key}) : super(key: key);
-
- 
-  @override
-  Widget build(BuildContext context) {
-    
-
-      return GridViewBuildDemo();
-    //  return GridViewExtentDemo();  //网格视图2
-    // return  GridViewDemo(); //网格视图1
-
-    // return GridViewCountDemo();  //分页视图1
-    // return PageViewBuilderDemo(); //分页视图2
-
-  }
-
-
-}
-
 // 用GridView.count或者PageView.builder生成的网格是固定的
-// 如果需要 按需生成
+// 如果需要 按需生成用GridView.builder
 
+//网格视图3
 class GridViewBuildDemo extends StatelessWidget {
   const GridViewBuildDemo({Key key}) : super(key: key);
 //typedef IndexedWidgetBuilder = Widget Function(BuildContext context, int index);
@@ -43,7 +24,7 @@ class GridViewBuildDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return GridView.builder(
-         padding: EdgeInsets.all(10),
+         padding: EdgeInsets.all(10),//设置边距
          itemCount: posts.length,
          itemBuilder: _itemBuilder,
          //实现代理
