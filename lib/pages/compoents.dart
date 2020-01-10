@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter20200109_basic_parts/widget/layout.dart';
 
+import '../widget/pageView.dart';
+
+
+
 class CompoentsPage extends StatelessWidget {
   const CompoentsPage({Key key}) : super(key: key);
 
@@ -26,7 +30,7 @@ Widget get _setupTabBarView{
 
   return  TabBarView(
            children: <Widget>[
-             PageView(),
+             PageViewPage(),
              Icon(Icons.face,size:120,color: Colors.red,),
             //  Icon(Icons.face,size:120,color: Colors.yellow,),
             

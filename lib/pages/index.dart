@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter20200109_basic_parts/compoents.dart';
+import 'package:flutter20200109_basic_parts/pages/uikit.dart';
 import 'package:flutter20200109_basic_parts/test.dart';
-import 'package:flutter20200109_basic_parts/uikit.dart';
+
+import 'compoents.dart';
 
 
 

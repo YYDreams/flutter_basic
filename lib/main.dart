@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter20200109_basic_parts/pages/index.dart';
 
-import 'index.dart';
 
 void main() => runApp(MyApp());
 
