@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter20200109_basic_parts/model/commpoentsModel.dart';
+import 'package:flutter20200109_basic_parts/widget/switch_demo.dart';
+import 'package:flutter20200109_basic_parts/widget/buttons_demo.dart';
+import 'package:flutter20200109_basic_parts/widget/checkbox_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/form_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/layout_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/listView_demo.dart';
@@ -42,6 +45,19 @@ class CompoentsPage extends StatelessWidget {
  }else if(index == 2){
    
    Navigator.push(context, MaterialPageRoute(builder: (context) => FormDemo()));
+ }else if (index == 3){
+   Navigator.push(context, MaterialPageRoute(builder: (context) => ButtonsDemo()));
+
+ }else if (index == 4){
+   Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckboxDemo()));
+
+ }else if (index == 5){
+   Navigator.push(context, MaterialPageRoute(builder: (context)=>SwitchDemo()));
+   
+ }else if (index == 6){
+
+ }else if (index == 7){
+   
  }
   
 

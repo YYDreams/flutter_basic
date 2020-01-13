@@ -26,17 +26,17 @@ final List<CommpoentsModel> commpoents = [
  
   
  CommpoentsModel(
-   title: 'PageView and GridView'
+   title: 'Buttons Widget'
  ),
  
   
  CommpoentsModel(
-   title: 'PageView and GridView'
+   title: 'Checkbox 复选框'
  ),
  
   
  CommpoentsModel(
-   title: 'PageView and GridView'
+   title: 'SwitchDemo'
  ),
  
   
