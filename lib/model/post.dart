@@ -6,6 +6,8 @@ final String imageUrl;
 
 final String description;
 
+ bool selected = false;
+
 
 Post({this.title,this.author,this.imageUrl,this.description});
 

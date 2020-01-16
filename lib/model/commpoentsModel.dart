@@ -41,22 +41,22 @@ final List<CommpoentsModel> commpoents = [
  
   
  CommpoentsModel(
-   title: 'PageView and GridView'
+   title: 'ToastsDmo'
  ),
  
   
  CommpoentsModel(
-   title: 'PageView and GridView'
+   title: 'ChipDemo'
  ),
  
   
  CommpoentsModel(
-   title: 'PageView and GridView'
+   title: 'DataTableDemo'
  ),
  
   
  CommpoentsModel(
-   title: 'PageView and GridView'
+   title: 'PaginatedDataTable分页显示表格数据'
  ),
  
   

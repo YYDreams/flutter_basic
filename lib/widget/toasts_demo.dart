@@ -26,7 +26,41 @@ class ToastsDemo extends StatefulWidget {
 
 class _ToastsDemoState extends State<ToastsDemo> {
   String _choice = 'Nothing';
+  List<ExpansionPanelItem> _expansionPanelItems;
 
+  @override
+  void initState() {
+  super.initState();
+    _expansionPanelItems = <ExpansionPanelItem>[
+      ExpansionPanelItem(
+        headerText: '我是选项A',
+        body: Container(
+                   padding: EdgeInsets.all(16),
+                   width: double.infinity,
+                   child: Text('我是选项A的副标题'),
+                 ),
+        isExpanded: false,   
+      ),
+      ExpansionPanelItem(
+        headerText: '我是选项B',
+        body: Container(
+                   padding: EdgeInsets.all(16),
+                   width: double.infinity,
+                   child: Text('我是选项B的副标题'),
+                 ),
+        isExpanded: false,   
+      ),
+      ExpansionPanelItem(
+        headerText: '我是选项C',
+        body: Container(
+                   padding: EdgeInsets.all(16),
+                   width: double.infinity,
+                   child: Text('我是选项C的副标题'),
+                 ),
+        isExpanded: false,   
+      ),
+    ];
+  }
   @override
   Widget build(BuildContext context) {
      
@@ -50,8 +84,47 @@ class _ToastsDemoState extends State<ToastsDemo> {
            RaisedButton(
              child: Text('ModalBottomSheet'),
              onPressed: _openModalBottomSheetAction,
-           )
+           ),
 
+           ExpansionPanelList(
+             //typedef ExpansionPanelCallback = void Function(int panelIndex, bool isExpanded);
+             //箭头的点击事件  panelIndex:被点的索引号
+             expansionCallback: (int panelIndex,bool isExpanded){
+
+               setState(() {
+                   _expansionPanelItems[panelIndex].isExpanded = ! isExpanded;
+
+               });
+
+             },
+
+             children: _expansionPanelItems.map(
+               (ExpansionPanelItem item){
+                 return ExpansionPanel(
+                    isExpanded: item.isExpanded,
+                    body: item.body,
+                    headerBuilder:  (BuildContext context,bool isExpanded){
+                      return Container(
+                        padding: EdgeInsets.all(15),
+                        child: Text(
+                          item.headerText,
+                        ),
+                      );
+                    }
+
+                 );
+               }
+             ).toList(),
+           
+
+             
+           ),
+          // RaisedButton(
+          //   child: Text('SnackBar'),
+          //   //typedef VoidCallback = void Function();
+          //    onPressed: (){
+          //    }
+          // )
          ],
        ),
      ),
@@ -176,7 +249,7 @@ class _ToastsDemoState extends State<ToastsDemo> {
     }
 
  
- _openModalBottomSheetAction() async{
+  Future _openModalBottomSheetAction() async{
   final sheet =  await  showModalBottomSheet(
        context: context,
        builder:(BuildContext context){
@@ -231,6 +304,16 @@ class _ToastsDemoState extends State<ToastsDemo> {
      }
    }
 
-   
-   }
+ }
+ 
+ class ExpansionPanelItem{
+   final String headerText;
+   final Widget body;
+   bool isExpanded;
 
+
+
+   ExpansionPanelItem({this.headerText,this.body,this.isExpanded});
+
+
+ }

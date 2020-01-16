@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter20200109_basic_parts/model/commpoentsModel.dart';
+import 'package:flutter20200109_basic_parts/widget/card_demo.dart';
+import 'package:flutter20200109_basic_parts/widget/chip_demo.dart';
+import 'package:flutter20200109_basic_parts/widget/dataTable_demo.dart';
+import 'package:flutter20200109_basic_parts/widget/paginateDataTable_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/switch_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/buttons_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/checkbox_demo.dart';
@@ -8,6 +12,7 @@ import 'package:flutter20200109_basic_parts/widget/layout_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/listView_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/pageView_gridView_demo.dart';
 import 'package:flutter20200109_basic_parts/widget/sliver_demo.dart';
+import 'package:flutter20200109_basic_parts/widget/toasts_demo.dart';
 
 class CompoentsPage extends StatelessWidget {
 
@@ -56,8 +61,29 @@ class CompoentsPage extends StatelessWidget {
    
  }else if (index == 6){
 
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>ToastsDemo()));
  }else if (index == 7){
+
+         Navigator.push(context, MaterialPageRoute(builder: (context)=>ChipDemo()));
    
+  }else if (index == 8){
+
+         Navigator.push(context, MaterialPageRoute(builder: (context)=>DataTableDemo()));
+
+
+ }else if (index == 9){
+
+         Navigator.push(context, MaterialPageRoute(builder: (context)=>PaginateDataTableDemo()));
+
+   
+   
+ }else if (index == 10){
+         Navigator.push(context, MaterialPageRoute(builder: (context)=>CardDemo()));
+
+
+ }else if (index == 11){
+
+  
  }
   
 
