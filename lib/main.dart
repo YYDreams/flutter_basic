@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
       return MaterialApp(
-        debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false, //去除右上角的debug
 
         theme: ThemeData(
           primaryColor: Colors.red,

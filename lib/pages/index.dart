@@ -3,10 +3,7 @@ import 'package:flutter20200109_basic_parts/pages/uikit.dart';
 import 'package:flutter20200109_basic_parts/widget/test.dart';
 
 
-
 import 'compoents.dart';
-
-
 
 class IndexPage extends StatefulWidget {
   IndexPage({Key key}) : super(key: key);
